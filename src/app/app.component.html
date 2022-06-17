@@ -36,14 +36,18 @@
             </svg>
           </a>
         </div>
-        <nav class="header__main__nav">
-          <a href="https://www.monobank.ua/#card-menu" class="header__main__nav__link">Картки</a>
-          <a href="https://www.monobank.ua/fop" class="header__main__nav__link active">ФОП</a>
-          <a href="https://www.monobank.ua/deposit" class="header__main__nav__link">Депозити</a>
-          <a href="https://www.monobank.ua/military-bonds" class="header__main__nav__link">Облігації</a>
-          <a href="https://chast.monobank.ua/" class="header__main__nav__link">Покупка частинами</a>
-          <a href="https://www.monobank.ua/international" class="header__main__nav__link">Міжнародні
-            перекази</a>
+        <nav>
+          <ul class="header__main__nav">
+            <li><a href="https://www.monobank.ua/#card-menu">Картки</a></li>
+            <li><a href="https://www.monobank.ua/fop" class="header__main__nav__link active">ФОП</a></li>
+            <li><a href="https://www.monobank.ua/deposit">Депозити</a></li>
+            <li><a href="https://www.monobank.ua/military-bonds">Облігації</a></li>
+            <li><a href="https://chast.monobank.ua/">Покупка частинами</a></li>
+            <li>
+              <a href="https://www.monobank.ua/international">Міжнародні
+                перекази</a>
+            </li>
+          </ul>
         </nav>
       </div>
     </div>
@@ -55,7 +59,7 @@
     <div class="container">
       <div class="first__screen__inner">
         <div class="first__screen__content">
-          <h1>Ми знову прибрали все зайве, щоб ви отримали кращий досвід.</h1>
+          <h2>Ми знову прибрали все зайве, щоб ви отримали кращий досвід.</h2>
           <p class="first__screen__text">Залиште номер телефону, і ми надішлемо посилання на <br> додаток, де
             можна
             відкрити рахунок ФОП</p>
@@ -65,11 +69,13 @@
             <button type="submit" class="first__screen__btn btn-white">Хочу рахунок ФОП</button>
           </form>
         </div>
-        <picture>
-          <source srcset="/assets/img/cat.webp" type="image/webp">
-          <source srcset="/assets/img/cat.png" type="image/png">
-          <img class="first__screen__img" src="/assets/img/cat.png" alt="cat" loading="lazy">
-        </picture>
+        <div class="first__screen__img">
+          <picture>
+            <source srcset="/assets/img/cat.webp" type="image/webp">
+            <source srcset="/assets/img/cat.png" type="image/png">
+            <img src="/assets/img/cat.png" alt="cat" loading="lazy">
+          </picture>
+        </div>
       </div>
     </div>
   </section>
@@ -84,7 +90,7 @@
         </picture>
 
         <div class="cabinet__content">
-          <h3>Бухгалтерський <br> кабінет</h3>
+          <h2>Бухгалтерський <br> кабінет</h2>
           <p class="cabinet__text">Окремий бухгалтерський кабінет для керування рахунком ФОП.</p>
           <p class="cabinet__text">Можна додати до двох додаткових номерiв телефону для роботи у веб-кабінеті.
           </p>
@@ -96,7 +102,7 @@
 
   <section class="advantages">
     <div class="container">
-      <h3>Ви так довго <br> цього чекали</h3>
+      <h2>Ви так довго <br> цього чекали</h2>
       <div class="advantages__inner">
         <ul class="advantages__items">
           <li class="advantages__item">
@@ -265,7 +271,7 @@
 
   <section class="fop">
     <div class="container">
-      <h3>Як відкрити <br> рахунок ФОП</h3>
+      <h2>Як відкрити <br> рахунок ФОП</h2>
       <ol class="fop__inner">
         <li class="fop__item">
           <div class="fop__icon">
@@ -320,7 +326,7 @@
 
   <section class="tariffs">
     <div class="container">
-      <h3>Тарифи</h3>
+      <h2>Тарифи</h2>
       <table class="tariffs__table">
         <thead>
           <tr class="tariffs__table__row">
@@ -376,7 +382,7 @@
     <div class="container">
       <div class="card__inner">
         <div class="card__content">
-          <h2>Немає картки monobank?</h2>
+          <h1>Немає картки monobank?</h1>
           <p class="card__text">Не страшно, її можна отримати просто зараз</p>
           <button class="card__button btn-white">Отримати картку</button>
           <div class="card__remark">
