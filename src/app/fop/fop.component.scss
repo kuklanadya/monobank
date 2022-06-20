@@ -1,0 +1,42 @@
+.fop {
+    background-color: #5c75e3;
+    color: #fff;
+    padding: 100px 0 20px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin: 45px 0;
+        padding: 42px 0;
+        svg {
+            color: #000;
+        }
+    }
+    &__item {
+        margin: 28px 25px;
+        position: relative;
+        list-style-type: none;
+        &::before {
+            content: "01";
+            position: absolute;
+            bottom: 25px;
+            left: -45px;
+            font-weight: 900;
+            color: #faf352;
+            font-size: 20px;
+            font-family: "Inter", sans-serif;
+        }
+        &:nth-child(2):before {
+            content: "02";
+        }
+        &:nth-child(3):before {
+            content: "03";
+        }
+    }
+    &__emoji {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}

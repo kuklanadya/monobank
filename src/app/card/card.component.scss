@@ -1,0 +1,32 @@
+.card {
+    background-color: #3a50de;
+    color: #fff;
+    padding: 200px 0 150px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 60px;
+    }
+    &__content {
+        max-width: 380px;
+    }
+    &__button {
+        margin: 45px 0;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        color: #455ce0;
+    }
+    &__remark {
+        max-width: 280px;
+        font-size: 14px;
+        padding-left: 8px;
+        border-left: 2px solid #f7e652;
+        a,
+        a:hover {
+            color: #f7e652;
+        }
+    }
+    &__img {
+        width: 506px;
+    }
+}

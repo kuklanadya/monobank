@@ -1,0 +1,42 @@
+.first-screen {
+    padding: 200px 0 150px;
+    background: #6849da;
+    color: #fff;
+    h2 {
+        margin: 45px 0;
+        line-height: 48px;
+        max-width: 500px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        position: relative;
+    }
+    &__content {
+        width: 50%;
+    }
+    &__text {
+        margin-bottom: 45px;
+    }
+    &__buttons {
+        display: flex;
+        gap: 16px;
+        margin: 16px 0;
+    }
+    &__btn {
+        color: #6849da;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+    &__input {
+        background: rgba(255, 255, 255, 0.2);
+        font-weight: 500;
+        color: white;
+        &::placeholder {
+            color: #c5adf1;
+        }
+    }
+    &__img {
+        background: url("../assets/img/cat-ellipse.svg") left center no-repeat;
+    }
+}

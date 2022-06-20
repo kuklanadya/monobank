@@ -1,0 +1,31 @@
+.cabinet {
+    &__inner {
+        padding: 100px 0;
+        gap: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__content {
+        width: 50%;
+        max-width: 500px;
+    }
+    &__img {
+        width: 100%;
+        margin-left: -30px;
+        margin-top: 100px;
+    }
+    &__text:first-of-type {
+        margin-top: 40px;
+    }
+    &__text:last-of-type {
+        margin-top: 22px;
+    }
+    &__btn {
+        margin-top: 65px;
+        border-radius: 16px;
+        color: #fff;
+        background-color: #6c38de;
+        box-shadow: 0 8px 16px rgba(108, 56, 222, 0.1);
+    }
+}
