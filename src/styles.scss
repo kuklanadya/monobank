@@ -1,6 +1,32 @@
 @import "./assets/styles/_nullstyle.scss";
 @import "./assets/styles/_fonts.scss";
 
+$maxWidth: 1920;
+$maxWidthContainer: 1100;
+@mixin adaptive-value($property, $startSize, $minSize, $type) {
+    $addSize: $startSize - $minSize;
+    @if $type==1 {
+        //только если меньше контейнера
+        #{$property}: $startSize + px;
+        @media (max-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+        }
+    } @else if $type==2 {
+        //только если больше контейнераа
+        #{$property}: $startSize + px;
+        @media (max-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+        }
+    } @else {
+        //всегда
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+    }
+}
+
+:root {
+    --red: #fa5255;
+}
+
 html,
 body {
     margin: 0;
@@ -10,7 +36,7 @@ footer,
 header,
 main {
     font-family: "Lato", sans-serif;
-    font-size: 18px;
+    @include adaptive-value("font-size", 18, 14, 1);
     font-weight: 500;
     line-height: 1.44;
 }
@@ -23,12 +49,13 @@ h2 {
 }
 
 h1 {
-    font-size: 56px;
-    margin: 45px 0;
+    @include adaptive-value("font-size", 56, 30, 1);
+    @include adaptive-value("margin-top", 45, 20, 1);
+    @include adaptive-value("margin-bottom", 45, 20, 1);
 }
 
 h2 {
-    font-size: 40px;
+    @include adaptive-value("font-size", 40, 26, 1);
 }
 
 select {
@@ -37,13 +64,15 @@ select {
 }
 
 section {
-    padding: 0 56px;
+    @include adaptive-value("paddint-right", 56, 20, 1);
+    @include adaptive-value("paddint-left", 56, 20, 1);
     max-width: 100%;
 }
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .btn-white,
@@ -72,10 +101,14 @@ section {
 }
 
 .link:hover,
-.active {
+.link-active {
     color: #fa5255 !important;
 }
 
-.active {
+.link-active {
     cursor: default;
+}
+
+.mobile {
+    display: none;
 }

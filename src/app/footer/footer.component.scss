@@ -1,5 +1,8 @@
+@import "../../styles.scss";
+
 .footer {
-    padding: 90px 0 100px;
+    @include adaptive-value("padding-top", 90, 50, 3);
+    @include adaptive-value("padding-bottom", 100, 40, 3);
     background-color: #000;
     &__inner {
         margin: 0 24px;
@@ -8,7 +11,7 @@
         width: 354px;
         color: #fff;
         &:hover {
-            color: #fa5255;
+            color: var(--red);
         }
     }
     &__remark {
@@ -32,7 +35,6 @@
         &__item {
             width: 100%;
             max-width: 255px;
-            margin: 15px;
             &__title {
                 font-weight: 900;
                 font-family: "Inter", sans-serif;
@@ -48,7 +50,7 @@
             line-height: 22px;
             color: rgba(255, 255, 255, 0.5);
             a {
-                color: #fa5255;
+                color: var(--red);
             }
         }
         &__social {
@@ -81,7 +83,7 @@
 }
 
 .new {
-    background-color: #fa5255;
+    background-color: var(--red);
     color: #000;
     font-size: 10px;
     font-weight: 700;
@@ -90,4 +92,31 @@
     position: relative;
     bottom: 10px;
     left: 5px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        &__inner {
+        }
+        &__nav {
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+            &__item {
+                max-width: 100%;
+                &__title {
+                    margin-bottom: 10px;
+                }
+            }
+            &__text {
+                margin-top: 15px;
+            }
+        }
+        &__remark {
+            margin-top: 15px;
+        }
+        &__social {
+            margin: 0;
+        }
+    }
 }

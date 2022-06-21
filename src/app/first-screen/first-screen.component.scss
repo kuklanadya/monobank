@@ -1,5 +1,9 @@
+@import "../../styles.scss";
+
 .first-screen {
     padding: 200px 0 150px;
+    @include adaptive-value("padding-top", 200, 50, 3);
+    @include adaptive-value("padding-bottom", 150, 80, 3);
     background: #6849da;
     color: #fff;
     h2 {
@@ -10,7 +14,7 @@
     &__inner {
         display: flex;
         justify-content: center;
-        gap: 40px;
+        @include adaptive-value("gap", 40, 0, 3);
         position: relative;
     }
     &__content {
@@ -37,6 +41,33 @@
         }
     }
     &__img {
-        background: url("../assets/img/cat-ellipse.svg") left center no-repeat;
+        background: url("../../assets/img/cat-ellipse.svg") left center no-repeat;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .first-screen {
+        h2 {
+            margin: 20px 0;
+            max-width: 100%;
+        }
+        &__inner {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        &__content {
+            width: 100%;
+            padding: 0 20px;
+        }
+        &__buttons {
+            flex-direction: column;
+        }
+        &__text {
+            margin-bottom: 20px;
+        }
     }
 }

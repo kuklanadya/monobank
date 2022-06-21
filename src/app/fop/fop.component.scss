@@ -1,7 +1,10 @@
+@import "../../styles.scss";
+
 .fop {
     background-color: #5c75e3;
     color: #fff;
-    padding: 100px 0 20px;
+    padding-bottom: 20px;
+    @include adaptive-value("padding-top", 100, 30, 1);
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -13,6 +16,8 @@
     }
     &__item {
         margin: 28px 25px;
+        @include adaptive-value("margin-right", 25, 5, 1);
+        @include adaptive-value("margin-left", 25, 5, 1);
         position: relative;
         list-style-type: none;
         &::before {
@@ -38,5 +43,30 @@
         top: 20px;
         width: 40px;
         height: 40px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .fop {
+        &__inner {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 25px 0;
+            padding: 22px 0;
+        }
+        &__item {
+            width: 40%;
+            margin: 28px 35px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .fop {
+        &__inner {
+            margin: 0;
+            padding: 15px 0 15px 30px;
+            flex-direction: column;
+        }
     }
 }

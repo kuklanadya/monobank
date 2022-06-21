@@ -1,5 +1,8 @@
+@import "../../styles.scss";
+
 .tariffs {
-    padding: 140px 0 100px;
+    @include adaptive-value("padding-top", 140, 60, 3);
+    @include adaptive-value("padding-bottom", 100, 70, 3);
     &-emoji-rocket {
         height: 60px;
         width: 60px;
@@ -31,6 +34,16 @@
     &__table {
         border-collapse: collapse;
         margin-top: 60px;
+        th,
+        td {
+            height: 118px;
+        }
+        th:nth-child(3),
+        th:nth-child(4),
+        td:nth-child(3),
+        td:nth-child(4) {
+            border-right: 2px solid rgba(204, 204, 204, 0.2);
+        }
         &__row:nth-child(2) &__item,
         &__row:nth-child(3) &__item {
             &::after {
@@ -39,7 +52,7 @@
                 top: 0;
                 left: 0;
                 right: 0;
-                border-bottom: 1px solid rgba(204, 204, 204, 0.05);
+                border-bottom: 2px solid rgba(204, 204, 204, 0.03);
             }
         }
         &__header {
@@ -76,7 +89,6 @@
             border-bottom-right-radius: 40px;
         }
         &__item {
-            color: #5f5f5f;
             width: 240px;
             text-align: center;
             vertical-align: middle;
@@ -93,4 +105,27 @@
 
 tr {
     position: relative;
+}
+
+@media (max-width: 768px) {
+    .tariffs {
+        &__remark {
+            text-align: left;
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+        &-emoji-rocket {
+            height: 40px;
+            width: 40px;
+            top: 20px;
+            right: -35px;
+        }
+        &__table {
+            margin-top: 30px;
+        }
+    }
+
+    .desktop {
+        display: none;
+    }
 }
