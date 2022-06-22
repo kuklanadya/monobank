@@ -8,9 +8,9 @@ describe('FopComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FopComponent ]
+      declarations: [FopComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(FopComponent);
     component = fixture.componentInstance;

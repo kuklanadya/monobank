@@ -1,4 +1,4 @@
-@import "../../styles.scss";
+@import "../../assets/styles/_mixins.scss";
 
 .tariffs {
     @include adaptive-value("padding-top", 140, 60, 3);

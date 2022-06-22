@@ -1,4 +1,4 @@
-@import "../../styles.scss";
+@import "../../assets/styles/_mixins.scss";
 
 .first-screen {
     padding: 200px 0 150px;
@@ -68,6 +68,14 @@
         }
         &__text {
             margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .first-screen {
+        &__img {
+            background: none;
         }
     }
 }

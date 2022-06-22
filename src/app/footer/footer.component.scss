@@ -1,4 +1,4 @@
-@import "../../styles.scss";
+@import "../../assets/styles/_mixins.scss";
 
 .footer {
     @include adaptive-value("padding-top", 90, 50, 3);
@@ -8,7 +8,7 @@
         margin: 0 24px;
     }
     &__logo {
-        width: 354px;
+        max-width: 354px;
         color: #fff;
         &:hover {
             color: var(--red);
