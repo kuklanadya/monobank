@@ -3,6 +3,7 @@
 .advantages {
     &__inner {
         padding-top: 65px;
+        @include adaptive-value("padding-top", 65, 20, 3);
         @include adaptive-value("padding-bottom", 100, 50, 3);
     }
     &__items {
